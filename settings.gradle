@@ -1,0 +1,2 @@
+include ':app', ':databinding_base'
+rootProject.name='DataBindingBase'
