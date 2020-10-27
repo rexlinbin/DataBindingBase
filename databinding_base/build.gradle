@@ -51,18 +51,18 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //okhttp、retrofit、rxjava
-    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
+    api 'com.squareup.okhttp3:okhttp:3.8.0'
+    api 'com.squareup.retrofit2:retrofit:2.3.0'
+    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    api 'io.reactivex.rxjava2:rxjava:2.1.7'
     //放着没有及时回收造成RxJava内存泄漏
-    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    api 'android.arch.lifecycle:extensions:1.1.1'
 
-    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
 
-    implementation 'com.github.rexlinbin:CommonUtils:1.0.0'
-    implementation 'com.github.rexlinbin:CommonViews:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    api 'com.github.rexlinbin:CommonUtils:1.0.0'
+    api 'com.github.rexlinbin:CommonViews:1.0.0'
+    api 'androidx.recyclerview:recyclerview:1.1.0'
 }
