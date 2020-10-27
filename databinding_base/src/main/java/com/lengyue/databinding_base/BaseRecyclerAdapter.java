@@ -87,7 +87,7 @@ public abstract class BaseRecyclerAdapter<T, B extends ViewDataBinding> extends 
     public void addItem(T t, int position){
         mList.add(position,t);
         notifyItemInserted(position);
-        notifyItemRangeChanged(position, mList.size() + 1);
+        notifyItemRangeChanged(position, mList.size() - position);
     }
 
     public void removeItems(int position, int count){
@@ -95,13 +95,13 @@ public abstract class BaseRecyclerAdapter<T, B extends ViewDataBinding> extends 
             mList.remove(position);
         }
         notifyItemRangeRemoved(position, count);
-        notifyItemRangeChanged(position + count, mList.size() + 1);
+        notifyItemRangeChanged(position, mList.size() - position);
     }
 
     public void addItems(List<T> list, int position){
         mList.addAll(position, list);
         notifyItemRangeInserted(position, list.size());
-        notifyItemRangeChanged(position + list.size(), mList.size() + 1);
+        notifyItemRangeChanged(position, mList.size() - position);
     }
     @LayoutRes
     protected abstract int getLayoutResId(int viewType);
