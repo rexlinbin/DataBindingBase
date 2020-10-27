@@ -30,7 +30,7 @@ import okhttp3.ResponseBody;
  * on 2019/10/15.
  */
 
-public abstract class BaseViewModel extends AndroidViewModel {
+public abstract class BaseViewModel<T extends RetrofitApiService> extends AndroidViewModel {
     private ArrayList<String> onNetTags;
     private LifecycleTransformer objectLifecycleTransformer;
 
@@ -40,8 +40,8 @@ public abstract class BaseViewModel extends AndroidViewModel {
         onNetTags = new ArrayList<>();
     }
 
-    protected RetrofitApiService getApiService() {
-        return RetrofitManager.getInstance().getApiService();
+    protected T getApiService() {
+        return (T) RetrofitManager.getInstance().getApiService();
     }
 
     public void setObjectLifecycleTransformer(LifecycleTransformer objectLifecycleTransformer) {

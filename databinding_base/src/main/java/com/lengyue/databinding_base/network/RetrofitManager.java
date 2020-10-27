@@ -20,11 +20,11 @@ public class RetrofitManager<T extends RetrofitApiService> {
         initRetrofit();
     }
 
-    public static RetrofitManager getInstance() {
+    public static <T extends RetrofitApiService> RetrofitManager getInstance() {
         if (retrofitManager == null) {
             synchronized (RetrofitManager.class) {
                 if (retrofitManager == null) {
-                    retrofitManager = new RetrofitManager();
+                    retrofitManager = new RetrofitManager<T>();
                 }
             }
         }
