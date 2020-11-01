@@ -30,7 +30,7 @@ import okhttp3.ResponseBody;
  * on 2019/10/15.
  */
 
-public abstract class BaseViewModel<T extends RetrofitApiService> extends AndroidViewModel {
+public abstract class BaseViewModel<T> extends AndroidViewModel {
     private ArrayList<String> onNetTags;
     private LifecycleTransformer objectLifecycleTransformer;
 
